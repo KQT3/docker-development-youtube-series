@@ -36,9 +36,9 @@ cd .\security\letsencrypt\introduction\
 
 docker build . -t certbot
 
-docker run -it --rm --name certbot `
--v ${PWD}:/letsencrypt `
--v ${PWD}/certs:/etc/letsencrypt `
+docker run -it --rm --name certbot \
+-v ${PWD}:/letsencrypt \
+-v ${PWD}/certs:/etc/letsencrypt \
 certbot bash
 
 ```
